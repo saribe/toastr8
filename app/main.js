@@ -9,6 +9,8 @@
 
 define(['toastr', 'toastr8'], function (toastr, toastr8) {
 
+    
+
     var init = function () {
         toastr8.info("Go get him a nice meal...", "It is your dog birthay.", { newestOnTop: true, timeOut: (Math.random() * 21200) + 1 }).css("background-color", getRandomColor());
         toastr8.warning("This is a beautiful message body....", "It is your dog birthay!", { newestOnTop: true, timeOut: (Math.random() * 831020) + 1 }).css("background-color", getRandomColor());
@@ -29,7 +31,8 @@ define(['toastr', 'toastr8'], function (toastr, toastr8) {
     };
 
     var init2 = function () {
-        toastr.info("This is a beautiful message body....", text);
+        toastr.options.positionClass = 'toast8-bottom-left';
+        toastr.info("This is a beautiful message body....", "It is your dog birthay!");
         toastr.warning("This is a beautiful message body....", "It is your dog birthay!");
         toastr.error("This is a beautiful message body....", "It is your dog birthay!");
         toastr.success("This is a beautiful message body....", "It is your dog birthay!");
@@ -50,7 +53,6 @@ define(['toastr', 'toastr8'], function (toastr, toastr8) {
 
     return {
         init: init,
-        init2: init2,
-        init3: init3
+        init2: init2
     };
 });
