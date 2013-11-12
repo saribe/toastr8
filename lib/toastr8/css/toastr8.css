@@ -106,16 +106,15 @@
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
         margin: 0 0 6px 0;
-        width: 24em;
+       
         height: 90px;
         border: 2px solid #d2d2d2;
         border: 2px solid rgba(210,210,210, 0.4);
         background-repeat: no-repeat;
         color: #ffffff;
         opacity: 1;
-    }
-    /*bootstrap fix*/
-    #toast8-container > div {
+
+    /*bootstrap fix  width: 24em;*/
         width: 27em;
     }
 
@@ -204,7 +203,7 @@
 }
 
 .toast8-facebook {
-    background-color: #3b5998;
+    background-color: #335795;
 }
 
 .toast8-twitter {
@@ -236,7 +235,7 @@
 }
 
 .toast8-github {
-    background-color: #AE4A54;
+    background-color: #000;
 }
 
 

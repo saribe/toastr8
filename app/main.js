@@ -47,8 +47,15 @@ define(['toastr', 'toastr8'], function (toastr, toastr8) {
         return color;
     }
 
-    $("a[style*=blue]").click(init);
-    $("a[style*=red]").click(init2);
+    $("#throwToastr8").click(init);
+    $("#throwToastr").click(init2);
+    $("#throwGithub").click(function () {
+        toastr8.github("<a href='https://github.com/saribe/toastr8'><i class='fa fa-link'></i> GitHub...</a>", "Toastr8 Page", { newestOnTop: true, timeOut: (Math.random() * 911400) + 1 }, "toastr-logo");
+    });
+    
+    $("#throwPPage").click(function() {
+        toastr8.windows("<a href='http://samuel.maispc.com'><i class='fa fa-link'></i> About me...</a>", "Personal Page", { newestOnTop: true, timeOut: (Math.random() * 911400) + 1 }, "toast8-avatar", "fa fa-user");
+    });
    // $(".fa-cog:nth-child(3)").click(init3);
 
     return {

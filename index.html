@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-        <link href="lib/toastr/css/toastr.min.css" rel="stylesheet" /><!-- only needed if you want to use toastr and toatr8 -->
-        <link href="lib/toastr8/css/toastr8.css" rel="stylesheet" />
-        <title>toastr Win8</title>
-    </head>
-    <body>
-        
-        <!--<span class="toast8-demo" style="left: -1px; position: absolute; top: 110px;"></span>-->
-        <a href="#" class="fa fa-cog" style="color: blue; font-size: 30px;text-decoration: none;"></a><span>  tostr8</span>
-        <br />
-        <a href="#" class="fa fa-cog" style="color: red; font-size: 30px;text-decoration:none;"></a><span>  toastr</span>
-        <br />
+<head>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/toastr/css/toastr.min.css" rel="stylesheet" />
+    <!-- only needed if you want to use toastr and toatr8 -->
+    <link href="lib/toastr8/css/toastr8.css" rel="stylesheet" />
+    <link href="content/css/main.css" rel="stylesheet" />
+    <title>toastr Win8</title>
+</head>
+<body>
 
-        <script src="lib/require/require.js" data-main="app/main"></script>
+    <nav class="nav defaut-nav navbar navbar-inverse" role="navigation">
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#" id="throwToastr8"><i class="fa fa-windows fa-2x"></i> Toast8</a></li>
+            <li><a href="#" id="throwToastr"><i class="fa fa-code fa-2x"></i> Toast</a></li>
+            <li class="divider"></li>
+            <li><a id="throwGithub" href="#"><i class="fa fa-github fa-2x"></i> GitHub</a></li>
+            <li><a id="throwPPage"  href="#"><i class="fa fa-user fa-2x"></i> Personal</a></li>
+        </ul>
+    </nav>
 
-        <!-- using wihtout requireJS -->
-        <!--<script src="lib/jquery/jquery-1.9.1.min.js"></script>
+    <script src="lib/require/require.js" data-main="app/main"></script>
+
+    <!-- using wihtout requireJS -->
+    <!--<script src="lib/jquery/jquery-1.9.1.min.js"></script>
         <!--<script src="lib/toastr/js/toastr.js"></script>
         <script src="lib/toastr8/js/toastr8.js"></script>-->
-    </body>
+</body>
 </html>
