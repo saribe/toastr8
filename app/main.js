@@ -1,22 +1,18 @@
 ﻿requirejs.config({
     paths: {
         'text': '../lib/require/text',
-        'toastr': '../lib/toastr/js/toastr',
         'toastr8': '../lib/toastr8/js/toastr8',
         'jquery': '../lib/jquery/jquery-1.9.1'
     }
 });
 
-define(['toastr', 'toastr8'], function (toastr, toastr8) {
-
-    
+define(['toastr8'], function (toastr8) {
 
     var init = function () {
         toastr8.info("Go get him a nice meal...", "It is your dog birthay.", { newestOnTop: true, timeOut: (Math.random() * 21200) + 1 }).css("background-color", getRandomColor());
         toastr8.warning("This is a beautiful message body....", "It is your dog birthay!", { newestOnTop: true, timeOut: (Math.random() * 831020) + 1 }).css("background-color", getRandomColor());
         toastr8.error("This is a beautiful message body....", "It is your dog birthay!", { newestOnTop: true, timeOut: (Math.random() * 11400) + 1 }, "toast8-default").css("background-color", getRandomColor());
         toastr8.success("This is a beautiful message body.This is a beautiful message body.This is a beautiful message body....", "It is your dog birthay!", { newestOnTop: true, timeOut: (Math.random() * 10300) + 1 }).css("background-color", getRandomColor());
-
 
         toastr8.github("This is a beautiful message body.", "Alerta github", { newestOnTop: true, timeOut: (Math.random() * 811000) + 1 });
         toastr8.googlePlus("This is a beautiful message body.", "Alerta Google+", { newestOnTop: true, timeOut: (Math.random() * 811000) + 1 });
@@ -31,11 +27,6 @@ define(['toastr', 'toastr8'], function (toastr, toastr8) {
     };
 
     var init2 = function () {
-        toastr.options.positionClass = 'toast8-bottom-left';
-        toastr.info("This is a beautiful message body....", "It is your dog birthay!");
-        toastr.warning("This is a beautiful message body....", "It is your dog birthay!");
-        toastr.error("This is a beautiful message body....", "It is your dog birthay!");
-        toastr.success("This is a beautiful message body....", "It is your dog birthay!");
     };
 
     function getRandomColor() {
@@ -53,7 +44,7 @@ define(['toastr', 'toastr8'], function (toastr, toastr8) {
         toastr8.github("<a href='https://github.com/saribe/toastr8'><i class='fa fa-link'></i> GitHub...</a>", "Toastr8 Page", { newestOnTop: true, timeOut: (Math.random() * 911400) + 1 }, "toastr-logo");
     });
     
-    $("#throwPPage").click(function() {
+    $("#throwPage").click(function() {
         toastr8.windows("<a href='http://samuel.maispc.com'><i class='fa fa-link'></i> About me...</a>", "Personal Page", { newestOnTop: true, timeOut: (Math.random() * 911400) + 1 }, "toast8-avatar", "fa fa-user");
     });
    // $(".fa-cog:nth-child(3)").click(init3);
