@@ -31,17 +31,20 @@ For other API calls, see the [demo](http://maispc.com/app/toastr8).
 
 		// Display an info notification with no title
 		toastr8.info('This is your dog birthday!');
-		
+![Display an info notification with no title](info.PNG)
+
 		// Display an info notification with title
 		toastr8.info('This is your dog birthday!', "Remember");
-		
+![Display an info notification with no title](info_title.PNG)		
+
 		// Alternative display an info notification with title and custom icon
 		toastr8.info({
 			message:'This is your dog birthday!', 
 			title:"Remember",
 			iconClass: "fa fa-calendar"
 		});
-		
+![Display an info notification with no title](info_iconClass.PNG)
+
 		// Alternative display an info notification with title and custom icon and image from css class
 		toastr8.info({
 			message:'This is your dog birthday!', 
@@ -49,6 +52,7 @@ For other API calls, see the [demo](http://maispc.com/app/toastr8).
 			iconClass: "fa fa-calendar",
 			imgClass: "dog-foto-img"
 		});
+![Display an info notification with no title](info_imgClass.PNG)
 		
 		// Alternative display an info notification with title and custom icon and image from url
 		toastr8.info({
@@ -57,15 +61,17 @@ For other API calls, see the [demo](http://maispc.com/app/toastr8).
 			iconClass: "fa fa-calendar",
 			imgURI: ["http://domain/images/failoverDogFoto.jpg" "http://domain/images/niceFoto.png" ]
 		});
-
+![Display an info notification with no title](info_iconURI.PNG)
 
 ### Other Options
 	// able toasts
 	var toasts = ["info", "error", "warning", "success", "facebook", "twitter", "skype", "android", "linkedIn", "windows", "googlePlus", "gitHub"];
 	
 	for(var i =0, k = toasts.length; i < k; i++){
-		toastr8[toasts[ i ] ]("message", "title", {timeOut: 36000});
+		//toastr8.toastElement("message", "title");
+		toastr8[toasts[ i ] ]("message", "title");
 	}
+![Display an info notification with no title](error_custom.PNG)
 		
 	// Clears the current list of toasts
 	toastr8.clear()
