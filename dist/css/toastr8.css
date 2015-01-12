@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Toastr8
  * Version 1.0.2
  * Copyright 2013 Samuel Pinto.  
@@ -80,8 +80,8 @@
         /* border-bottom: 1px solid rgba(210,210,210, 0.8); */
         background-repeat: no-repeat;
         color: #ffffff;
-        -ms-opacity: 0.9;
-        opacity: 0.97;
+        -ms-opacity: 0.7;
+        /* opacity: 0.7; */
         /*bootstrap fix  width: 24em;*/
         width: 26em;
         /* border-collapse: collapse; */
@@ -189,7 +189,7 @@
             background-repeat: no-repeat;
             line-height: 89px;
             width: 90px;
-            height: 100%;
+            /* height: 100%; */
             min-height: 89px;
             padding: 0;
             text-align: center;

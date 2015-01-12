@@ -1,6 +1,6 @@
-﻿/*//
+/*//
  * Toastr8
- * Version 1.0.2
+ * Version 1.0.3
  * Copyright 2013 Samuel Ribeiro Pinto.  
  * All Rights Reserved.  
  * Use, reproduction, distribution, and modification of this code is subject to the terms and 
@@ -164,7 +164,6 @@
 
                     return $toastElement["animate"](
                     { right: -330 },
-                     330,
                     'easeInBack')
                     .animate({ opacity: 0 }, 'slow',
                     function () {

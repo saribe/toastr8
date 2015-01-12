@@ -3,22 +3,15 @@
 
 
 ## Current Version
-1.0.1
+1.0.3
 
 
 ## Demo
 - Demo can be found at http://maispc.com/app/toastr8
-- [Demo using FontAwesome icons with toastr8](http://plnkr.co/edit/6W9URNyyp2ItO4aUWzBB?p=preview)
 
 
 ## Wiki and Change Log
 [Wiki including Change Log](http://maispc.com/app/toastr8/wiki)
-
-## Breaking Changes
- 
-####Animation Changes
-
-## Quick start
 
 ###3 Easy Steps
 For other API calls, see the [demo](http://maispc.com/app/toastr8).
