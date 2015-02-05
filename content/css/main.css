@@ -1,0 +1,131 @@
+﻿html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.defaut-nav {
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 130px;
+    border-radius: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    float: left;
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0 0 0 -80px;
+    border-right-color: #F0AE89;
+}
+
+    .defaut-nav:hover {
+        margin-left: 0;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .defaut-nav > ul {
+        height: 100%;
+        left: 0;
+        padding: 0;
+        margin-top: 0;
+        text-align: right;
+    }
+
+        .defaut-nav > ul > li {
+            right: 0;
+            left: 0;
+        }
+
+            .defaut-nav > ul > li > a {
+                border-radius: 0;
+            }
+
+                .defaut-nav > ul > li > a > span {
+                    margin-right: 15px;
+                }
+
+                .defaut-nav > ul > li > a > i {
+                    margin-right: -3px;
+                }
+
+        .defaut-nav > ul > .divider {
+            width: 92%;
+            margin: 5px 5px 5px 5px;
+            overflow: hidden;
+            background-color: #F0AE89;
+            height: 1px;
+        }
+
+
+#main-content {
+    background-color: #DDFFCC;
+    width: auto;
+    height: 100%;
+    padding: 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: 0;
+    overflow-y: scroll;
+    scrollbar-base-color: #686868;
+    scrollbar-track-color: #dedeff;
+    scrollbar-arrow-color: #686868;
+}
+
+a {
+    color: #DDFFCC;
+}
+
+    a:hover {
+        color: #66adb1;
+    }
+
+.btn[data-toastr8] {
+    width: 100%;
+    /* border-color: #fff; */
+}
+
+.alert-success {
+    color: #fff;
+    background-color: #ACE379;
+    border-color: #DEBF77;
+}
+
+.btn:hover {
+    color: #F0AE89;
+    background-color: #DDFFCC;
+    border-color: #DEBF77;
+}
+
+#main-content::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: #686868;
+}
+
+#main-content::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+}
+
+
+
+
+html,body { -webkit-backface-visibility:hidden;}
+
+/* text-based popup styling */
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 25px;
+  width:auto;
+  max-width: 400px;
+  margin: 0 auto; 
+}
+
+
+
+
