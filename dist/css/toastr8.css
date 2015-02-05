@@ -35,8 +35,8 @@
 }
 
 .toast8-bottom-right {
-    right: 12px;
-    bottom: 12px;
+    right: 0px;
+    bottom: 0px;
 }
 
 .toast8-bottom-left {
@@ -73,23 +73,17 @@
         border-spacing: 0;
         overflow: hidden;
         margin: 5px 0;
-        /* border: 1px solid #d2d2d2; */
-        /* border-left: 1px solid rgba(210,210,210, 0.4); */
-        /* border-right: 1px solid rgba(210,210,210, 0.8); */
-        /* border-top: 1px solid rgba(210,210,210, 0.4); */
-        /* border-bottom: 1px solid rgba(210,210,210, 0.8); */
         background-repeat: no-repeat;
         color: #ffffff;
-        -ms-opacity: 0.7;
-        /* opacity: 0.7; */
+        -ms-opacity: 0.9;
+        opacity: 0.97;
         /*bootstrap fix  width: 24em;*/
-        width: 26em;
+        width: 25em;
         /* border-collapse: collapse; */
-        min-height: 5em;
+        min-height: 6.5em;
         /* box-shadow: 0px 0px 3px #d2d2d2; */
-    
-        max-width: 26em;
-}
+        max-width: 25em;
+    }
 
     #toast8-container tr {
         vertical-align: top;
@@ -103,21 +97,23 @@
 
         #toast8-container tr > .toast8-message-container {
             display: inherit;
-        
             max-width: 23em;
-}
+        }
 
             #toast8-container tr > .toast8-message-container > .toast8-title {
                 float: left;
                 overflow: hidden;
-                padding: 5px;
+                padding: 5px 7px;
                 /* width: 100%; */
                 /* height: 1.6em; */
                 font-weight: bolder;
                 /* font-size: 1em; */
                 text-align: left;
                 width: 100%;
-            }
+            
+                word-break: break-all;
+                word-wrap: normal;
+}
 
             #toast8-container tr > .toast8-message-container > .toast8-message {
                 float: left;
@@ -127,11 +123,10 @@
                 word-wrap: break-word;
                 text-align: left;
                 /* font-size: 0.85em; */
-            
                 max-width: 24em;
                 overflow: auto;
                 max-height: 29em;
-}
+            }
 
                 #toast8-container tr > .toast8-message-container > .toast8-message a,
                 #toast8-container tr > .toast8-message-container > .toast8-message label {
@@ -151,8 +146,8 @@
         }
 
             #toast8-container tr > .toast8-right-container i {
-                font-size: 1.5em;
-                margin: 5px;
+                font-size: 1.7em;
+                margin: 7px;
             }
 
             #toast8-container tr > .toast8-right-container .toast8-close-button {
@@ -182,18 +177,22 @@
                 }
 
         #toast8-container tr > .toast8-avatar-container {
-            float: left;
+            /* float: left; */
             background-color: #333333;
             background-color: rgba(51, 51, 51, 0.9);
             background-position: center center;
             background-repeat: no-repeat;
-            line-height: 89px;
+            line-height: 94px;
             width: 90px;
-            /* height: 100%; */
-            min-height: 89px;
+            height: 100%;
+            max-height: 90px;
             padding: 0;
             text-align: center;
-        }
+        
+            /* margin-top: auto; */
+            /* margin-bottom: auto; */
+            /* padding-top: 25px; */
+}
 
             #toast8-container tr > .toast8-avatar-container i {
                 position: absolute;
@@ -217,7 +216,7 @@
 
 /* ============================ MESSAGE TYPE ============================ */
 .toast8-avatar {
-    background-image: url('data:image/jpg;base64,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');
+    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCABZAFoDASIAAhEBAxEB/8QAGwABAAMAAwEAAAAAAAAAAAAAAAUGBwEDBAL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHQQAHPrPG54AAAHf0W8ssnyIjM9johUgAALvSJM1V8/Qptwy8iQADtO+x2/wBRnMlboYqMnbfaZdEbPmRCgTsFaS/gAAVO2V0zkC50y8lvAAAhZqHMvB//xAAnEAAABQQCAQMFAAAAAAAAAAABAgMEBQYQESAAFBIWISIwMTM1QP/aAAgBAQABBQL+AAyPTXx9vooomXVZx6bMnH0cm8IqmZFTenkcnvUCIFV3p0/xvURvjvHO+m5KYDl4Y3iEk87jnZu0VdGJTxhIVZ1Dn9ReziQcSApU+YybqLXa6pJiso2blbI8VSIsQYRqIoM0W1hDPJVn1HN4UvlIb1CnlC9PFy63nQyxvTpffeZDMdenfx7y/wCut//EABQRAQAAAAAAAAAAAAAAAAAAAFD/2gAIAQMBAT8BE//EABQRAQAAAAAAAAAAAAAAAAAAAFD/2gAIAQIBAT8BE//EAC4QAAIAAwUFBwUAAAAAAAAAAAECAAMREiAhMFEQMTJCcRMiI0FSYYEzQHKSsf/aAAgBAQAGPwL7CgivYv8ArlLLXiMCyKt5ts9MzyaGRsGGRNmaYC5LmDmFDkTl6G5JXqcgPy7mgEGoOypwEFhwDBb9Ja194706jaARYbFNDuj6GP5R2YGB5FirzLDaUrFSLSepbqoN7GkBFGA2WXUMNDFbJHzHhoF99vd4GxFxPapyJb6NS450XI6MLk49Mib8f25O6jIndNv/xAApEAEAAQEGBQQDAQAAAAAAAAABEQAgITAxQVEQcYGhsWGR8PFAwdHh/9oACAEBAAE/IfwEIJXQpPId5UikSE0cEkZWCii4b3NqKdSAZJf1oQZMJgC6Xk631YIqFOh94Ab8f0WANUvgwJWz3HpRBgSJwB0AvVr+TG3tzLxz0HWpQHqEqGm3ePk18zHirsprhz50flum4oli3qBzs5JMFBuMx3d+Cpj0K6dYcVMyz1e/AAiCOlFcIGLbcsZMuPYwB1LvD/LHJN93AnXcWPabzgcmS7LHxW2B2Lycf//aAAwDAQACAAMAAAAQ8880888o0c888sQk888cs408sc88s8o888sc/8QAFBEBAAAAAAAAAAAAAAAAAAAAUP/aAAgBAwEBPxAT/8QAFBEBAAAAAAAAAAAAAAAAAAAAUP/aAAgBAgEBPxAT/8QAJxABAAEBBgYDAQEAAAAAAAAAAREAITAxUWFxIEGBkaGxEMHw0UD/2gAIAQEAAT8Q/wACQHQBKuUVIBxnA+qUAiEIS52NdBmugW9Kkodgk3OMjQrc0kC2YMsxUhU9cc9v7cWmIhNSvh3rD5lUEjmoh3iHS4llgrmiK8nngigb2AB9+LhLajEzpbuJNDMYlIjzPgJ5qUAGKtExUIMwq9S9o48wgVm/yVNFjEi7qT2q0VGesJYOncoErdnlREItzlerF8GlANJMcaVkl2ok9qZAaMThCedwFielDOTAt5y1fi0FkyDfRqACYx3tRENIQK+qXz8BSCFEiU2GyRKfA+zgnrJJZhaJ7pcAMlnSj7HfgBO3sof5cfhUk++CSHgT+fouPwLHAfqZrsF//9k=');
 }
 
 .toast8 {
@@ -283,23 +282,90 @@
 
 
 /*Responsive Design*/
-@media all and (max-width: 240px) {
+@media (max-width: 240px) {
     #toast8-container > table {
         width: 15em;
-        font-size: 80%;
+        font-size: 70%;
+    }
+
+    #toast8-container tr > .toast8-avatar-container {
+        display: none;
     }
 }
 
-@media all and (min-width: 241px) and (max-width: 480px) {
+@media (max-width: 480px) {
     #toast8-container > table {
         width: 16em;
-        font-size: 85%;
+        font-size: 75%;
     }
 }
 
-@media all and (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
     #toast8-container > table {
-        width: 17em;
-        font-size: 90%;
+        width: 20em;
+        min-width: 20em;
+        font-size: 85%;
+    }
+
+    #toast8-container tr > .toast8-right-container i {
+        font-size: 1em;
+        margin: 5px;
+    }
+}
+
+
+.slideOutRight {
+    animation-name: slideOutRight;
+    -webkit-animation-name: slideOutRight;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    opacity: 0 !important;
+}
+
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-8%);
+    }
+
+    65% {
+        transform: translateX(-5%);
+    }
+
+    75% {
+        transform: translateX(-8%);
+    }
+
+    100% {
+        transform: translateX(150%);
+        opacity: 0.2;
+    }
+}
+
+@-webkit-keyframes slideOutRight {
+    0% {
+        -webkit-transform: translateX(0%);
+        opacity: 1;
+    }
+
+    50% {
+        -webkit-transform: translateX(-8%);
+    }
+
+    65% {
+        -webkit-transform: translateX(-11%) rotate(-1deg);
+    }
+
+
+    100% {
+        -webkit-transform: translateX(110%);
+        opacity: 0.2;
     }
 }

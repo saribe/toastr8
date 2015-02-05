@@ -85,7 +85,7 @@
                     $toastElement.append(createBlock("td", null, options.leftBlockClass + " " + map.imgClass));
                 }
                 else if (map.imgURI) {
-                    var style = "background-size: 100% 100%;";
+                    var style = "background-size: 100% auto;";
                     for (var i = 0, k = map.imgURI.length; i < k; i++) {
                         style += "background-image: url('" + map.imgURI[i] + "');";
                     }
@@ -162,11 +162,7 @@
                 function closeToast(override) {
                     if ($(':focus', $toastElement).length && !override) { return null; }
 
-                    return $toastElement["animate"](
-                    { right: -330 },
-                    'easeInBack')
-                    .animate({ opacity: 0 }, 'slow',
-                    function () {
+                    return $toastElement.addClass("slideOutRight").delay(1000).queue(function () {
                         if (options.onHidden) {
                             options.onHidden();
                         }
