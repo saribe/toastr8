@@ -1,5 +1,5 @@
 # toastr8
-**toastr8** is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.
+**toastr8** is a jQuery notification plugin for creating Windows 8 metro inspired toast messages that use Font Awesome for notification icons.
 
 
 ## Current Version
@@ -16,9 +16,9 @@
 ###3 Easy Steps
 For other API calls, see the [demo](http://maispc.com/app/toastr8).
 
-1. Link to toastr8.css `<link href="toastr8.css" rel="stylesheet"/>`
+1. Link to toastr8.css `<link href="http://rawgit.com/saribe/toastr8/master/dist/css/toastr8.min.css" rel="stylesheet"/>`
 
-2. Link to toastr8.js `<script src="toastr8.js"></script>`
+2. Link to toastr8.js `<script src="http://rawgit.com/saribe/toastr8/master/dist/js/toastr8.min.js"></script>`
 
 3. use toastr8 to display a toast notifcation
 
@@ -60,8 +60,8 @@ For other API calls, see the [demo](http://maispc.com/app/toastr8).
 	// able toasts
 	var toasts = ["info", "error", "warning", "success", "facebook", "twitter", "skype", "android", "linkedIn", "windows", "googlePlus", "gitHub"];
 	
-	for(var i =0, k = toasts.length; i < k; i++){
-		//toastr8.toastElement("message", "title");
+	for(var i = 0, k = toasts.length; i < k; i++){
+	
 		toastr8[toasts[ i ] ]("message", "title");
 	}
 ![Display an info notification with no title](error_custom.PNG)
@@ -70,20 +70,6 @@ For other API calls, see the [demo](http://maispc.com/app/toastr8).
 	toastr8.clear()
 
 	
-### Close Button
-Optionally enable a close button
-
-    toastr8.options.closeButton = true;
-
-Optionally override the close button's HTML. 
-
-    toastr8.options.closeHtml = '<b><i class="fa-times"></i></b>';
-
-You can also override default icons
-	// override info class icon
-   toastr8.options.iconClasses.info = "fa fa-archive";
-
-   
 ### Display Sequence
 Show newest toast at bottom (top is default)
 
@@ -95,30 +81,6 @@ Show newest toast at bottom (top is default)
 	toastr8.options.onShown = function() { console.log('hello'); }
 	toastr8.options.onHidden = function() { console.log('goodbye'); }
 
-	
-### Animation Options
-toastr8 will supply default animations, so you do not have to provide any of these settings. However you have the option to override the animations if you like.
-
-
-####Easings
-Optionally override the animation easing to show or hide the toasts. Default is swing. swing and linear are built into jQuery.
-
-	toastr8.options.showEasing = 'swing';
-	toastr8.options.hideEasing = 'linear';
-
-Using the jQuery Easing plugin (http://www.gsgd.co.uk/sandbox/jquery/easing/)
-
-	toastr8.options.showEasing = 'easeOutBounce';
-	toastr8.options.hideEasing = 'easeInBack';
-
-	
-####Animation Method
-Use the jQuery show/hide method of your choice. These default to fadeIn/fadeOut. The methods fadeIn/fadeOut, slideDown/slideUp, and show/hide are built into jQuery.
-
-	toastr8.options.showMethod = 'slideDown'; 
-	toastr8.options.hideMethod = 'slideUp'; 
-
-	
 ## Authors
 **Samuel Ribeiro **
 
