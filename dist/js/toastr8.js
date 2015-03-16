@@ -11,9 +11,9 @@
  */
 
 ; (function (define) {
-    define(['jquery'], function ($) {
+    define(["jquery"], function ($) {
         return (function () {
-            var version = '1.0.1';
+            var version = "1.0.1";
             var $container;
             var listener;
             var toastId = 0;
@@ -57,22 +57,22 @@
                 var options = getActualOptions();
                 var iconClass = map.iconClass || options.iconClass;
                 var intervalId = null;
-                var $toastElement = $('<table/>')
+                var $toastElement = $("<table/>")
                     .append("<tbody/>")
                     .append("<tr/>")
-                    .addClass(options.toastClass + ' ' + options.toastClass + "-" + map.type)
+                    .addClass(options.toastClass + " " + options.toastClass + "-" + map.type)
                     .find("tr");
                 var $messageContainer = createBlock("td", null, options.centerBlockClass);
                 var $closeElement = $(options.closeHtml);
                 var response = {
                     toastId: toastId,
-                    state: 'visible',
+                    state: "visible",
                     startTime: new Date(),
                     options: options,
                     map: map
                 };
 
-                if (typeof (map) !== 'undefined') {
+                if (typeof (map) !== "undefined") {
                     options = $.extend(options, map);
                     iconClass = map.iconClass || iconClass;
                 }
@@ -108,7 +108,7 @@
                         $toastElement.find("." + options.rightBlockClass).append($closeElement);
                     }
 
-                    if (map.iconClass && map.iconClass != 'none')
+                    if (map.iconClass && map.iconClass !== "none")
                         $toastElement.find("." + options.rightBlockClass).append(createBlock("i", null, map.iconClass));
                 }
 
@@ -160,13 +160,13 @@
                 }
 
                 function closeToast(override) {
-                    if ($(':focus', $toastElement).length && !override) { return null; }
+                    if ($(":focus", $toastElement).length && !override) { return null; }
 
                     return $toastElement.addClass("slideOutRight").delay(1000).queue(function () {
                         if (options.onHidden) {
                             options.onHidden();
                         }
-                        response.state = 'hidden';
+                        response.state = "hidden";
                         response.endTime = new Date(),
                         publish(response);
                         $toastElement.remove();
@@ -174,7 +174,7 @@
                 }
 
                 function hideToast(override) {
-                    if ($(':focus', $toastElement).length && !override) {
+                    if ($(":focus", $toastElement).length && !override) {
                         return null;
                     }
                     return $toastElement[options.hideMethod]({
@@ -185,7 +185,7 @@
                             if (options.onHidden) {
                                 options.onHidden();
                             }
-                            response.state = 'hidden';
+                            response.state = "hidden";
                             response.endTime = new Date(),
                 			publish(response);
                         }
@@ -208,11 +208,10 @@
 
             function removeToast($toastElement) {
                 if (!$container) { $container = getContainer(); }
-                if ($toastElement.is(':visible')) {
+                if ($toastElement.is(":visible")) {
                     return;
                 }
                 $toastElement.remove();
-                $toastElement = null;   //memory leaks
                 if ($container.children().length === 0) {
                     $container.remove();
                 }
@@ -230,60 +229,60 @@
             function getDefaultOptions() {
                 return {
                     tapToDismiss: true,
-                    toastClass: 'toast8',
-                    containerId: 'toast8-container',
+                    toastClass: "toast8",
+                    containerId: "toast8-container",
                     debug: false,
                     closeButton: true,
-                    showMethod: 'fadeIn', //fadeIn, slideDown, and show are built into jQuery
+                    showMethod: "fadeIn", //fadeIn, slideDown, and show are built into jQuery
                     showDuration: 300,
-                    showEasing: 'swing', //swing and linear are built into jQuery
+                    showEasing: "swing", //swing and linear are built into jQuery
                     onShown: undefined,
-                    hideMethod: 'fadeOut',
+                    hideMethod: "fadeOut",
                     hideDuration: 1000,
-                    hideEasing: 'swing',
+                    hideEasing: "swing",
                     extendedTimeOut: 1000,
                     iconClasses: {
-                        info: 'fa fa-info',
-                        success: 'fa fa-check',
-                        error: 'fa fa-ban',
-                        warning: 'fa fa-exclamation',
-                        facebook: 'fa fa-facebook',
-                        twitter: 'fa fa-twitter',
-                        skype: 'fa fa-skype',
-                        windows: 'fa fa-windows',
-                        android: 'fa fa-android',
-                        linkedin: 'fa fa-linkedin',
-                        googlePlus: 'fa fa-google-plus',
-                        linux: 'fa fa-linux',
-                        github: 'fa fa-github'
+                        info: "fa fa-info",
+                        success: "fa fa-check",
+                        error: "fa fa-ban",
+                        warning: "fa fa-exclamation",
+                        facebook: "fa fa-facebook",
+                        twitter: "fa fa-twitter",
+                        skype: "fa fa-skype",
+                        windows: "fa fa-windows",
+                        android: "fa fa-android",
+                        linkedin: "fa fa-linkedin",
+                        googlePlus: "fa fa-google-plus",
+                        linux: "fa fa-linux",
+                        github: "fa fa-github"
                     },
-                    iconClass: 'toast8-info',
-                    positionClass: 'toast8-bottom-right',
+                    iconClass: "toast8-info",
+                    positionClass: "toast8-top-right",
                     timeOut: 5000, // Set timeOut and extendedTimeout to 0 to make it sticky
-                    titleClass: 'toast8-title',
-                    messageClass: 'toast8-message',
-                    leftBlockClass: 'toast8-avatar-container',
-                    centerBlockClass: 'toast8-message-container',
-                    rightBlockClass: 'toast8-right-container',
-                    target: 'body',
+                    titleClass: "toast8-title",
+                    messageClass: "toast8-message",
+                    leftBlockClass: "toast8-avatar-container",
+                    centerBlockClass: "toast8-message-container",
+                    rightBlockClass: "toast8-right-container",
+                    target: "body",
                     closeHtml: "<button class='toast8-close-button'>×</button>",
                     newestOnTop: true
                 };
             }
             function getContainer(options) {
                 if (!options) { options = getActualOptions(); }
-                $container = $('#' + options.containerId);
+                $container = $("#" + options.containerId);
                 if ($container.length) {
                     return $container;
                 }
-                $container = $('<div/>')
-					.attr('id', options.containerId)
+                $container = $("<div/>")
+					.attr("id", options.containerId)
 					.addClass(options.positionClass);
                 $container.appendTo($(options.target));
                 return $container;
             }
-            function unwrapArguments(args, type, iconClass, extraClass) {
-                if (args && typeof (args[0]) === 'object') {
+            function unwrapArguments(args, type, iconClass/*, extraClass*/) {
+                if (args && typeof (args[0]) === "object") {
                     args[0].type = type;
                     if (!args[0].iconClass)
                         args[0].iconClass = iconClass;
@@ -298,7 +297,7 @@
                     message: args[0],
                     title: args[1],
                     imgClass: args[3] || null,
-                    iconClass: args[4] || iconClass,
+                    iconClass: args[4] || iconClass
                 }, type);
 
                 function fixTimeOut(obj, t) {
@@ -316,7 +315,7 @@
                             break;
                     }
                     return obj;
-                };
+                }
             }
             //#endregion
 
@@ -370,7 +369,7 @@
             function clear($toastElement) {
                 var localOptions = getActualOptions();
                 if (!$container) { getContainer(options); }
-                if ($toastElement && $(':focus', $toastElement).length === 0) {
+                if ($toastElement && $(":focus", $toastElement).length === 0) {
                     $toastElement[localOptions.hideMethod]({
                         duration: localOptions.hideDuration,
                         easing: localOptions.hideEasing,
@@ -389,10 +388,10 @@
             //#endregion
         })();
     });
-}(typeof define === 'function' && define.amd ? define : function (deps, factory) {
-    if (typeof window.module !== 'undefined' && window.module.exports) { //Node
+}(typeof define === "function" && define.amd ? define : function (deps, factory) {
+    if (typeof window.module !== "undefined" && window.module.exports) { //Node
         window.module.exports = factory(window.require(deps[0]));
     } else {
-        window.toastr8 = factory(window['jQuery']);
+        window.toastr8 = factory(window["jQuery"]);
     }
 }));

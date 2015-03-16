@@ -26,22 +26,22 @@
 
 .toast8-top-left {
     top: 12px;
-    left: 12px;
+    left: 0;
 }
 
 .toast8-top-right {
     top: 12px;
-    right: 12px;
+    right: 0;
 }
 
 .toast8-bottom-right {
-    right: 0px;
-    bottom: 0px;
+    right: 0;
+    bottom: 12px;
 }
 
 .toast8-bottom-left {
     bottom: 12px;
-    left: 12px;
+    left: 0;
 }
 /* ===== POSITIONS ===== */
 
