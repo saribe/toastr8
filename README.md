@@ -7,14 +7,14 @@
 
 
 ## Demo
-- Demo can be found at http://maispc.com/app/toastr8
+- Demo can be found at http://saribe.github.io/toastr8
 
 
 ## Wiki and Change Log
 [Wiki including Change Log](https://github.com/saribe/toastr8/wiki)
 
 ###3 Easy Steps
-For other API calls, see the [demo](http://saribe.github.io/toastr8/).
+For other API calls, see the [demo](http://saribe.github.io/toastr8).
 
 1. Link to toastr8.css `<link href="http://rawgit.com/saribe/toastr8/master/dist/css/toastr8.min.css" rel="stylesheet"/>`
 
