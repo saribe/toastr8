@@ -2,7 +2,6 @@
     paths: {
         'text': '//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min',
         'toastr8': '//rawgit.com/saribe/toastr8/master/dist/js/toastr8.min',
-        //'toastr8': '../toastr8/dist/js/toastr8',
         'jquery': '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min'
     }
 });
@@ -26,7 +25,6 @@ define(['toastr8'], function (toastr8) {
         'http://38.media.tumblr.com/avatar_fcef91ef5cf2_128.png',
         'http://gp6.googleusercontent.com/-dUsbYRAWMqI/AAAAAAAAAAI/AAAAAAAAAAA/Ntl4OJkcAt8/s100-c-k-no/photo.jpg',
         'http://www.vet-way.com/wp-content/themes/vetway/images/banner_dog.png'
-
     ];
 
     var al = avatars.length;
@@ -34,38 +32,38 @@ define(['toastr8'], function (toastr8) {
 
     var init = function () {
 
-        randomToast("info");
-        randomToast("warning");
-        randomToast("error");
-        randomToast("success");
+        randomToast('info');
+        randomToast('warning');
+        randomToast('error');
+        randomToast('success');
 
         return this;
     };
 
 
-    $("[data-toastr8]").click(function(ev) {
-        var type = $(ev.currentTarget).attr("data-toastr8");
+    $('[data-toastr8]').click(function(ev) {
+        var type = $(ev.currentTarget).attr('data-toastr8');
         randomToast(type);
     });
 
-    $("#throwToastr8").click(init);
-    $("#throwGithub").click(function () {
+    $('#throwToastr8').click(init);
+    $('#throwGithub').click(function () {
         return toastr8.github({
-            message: "<a href='https://github.com/saribe/toastr8'><i class='fa fa-link'></i> GitHub...</a>",
-            title: "Toastr8 Page",
-            imgURI: ["http://i.imgur.com/VUDoLwz.png"],
+            message: '<a href=\'https://github.com/saribe/toastr8\'><i class=\'fa fa-link\'></i> GitHub...</a>',
+            title: 'Toastr8 Page',
+            imgURI: ['http://i.imgur.com/VUDoLwz.png'],
             timeOut: 5000
         });
     });
 
-    $("#throwPage").click(function () {
+    $('#throwPage').click(function () {
         return toastr8.info({
-            message: "<a href='http://samuel.maispc.com'><i class='fa fa-link'></i> About me...</a>",
-            title: "Personal Page",
-            imgURI: ["https://avatars0.githubusercontent.com/u/4276775?v=3&s=90"],
-            iconClass: "glyphicon glyphicon-user text-warning",
+            message: '<a href=\'http://samuel.maispc.com\'><i class=\'fa fa-link\'></i> About me...</a>',
+            title: 'Personal Page',
+            imgURI: ['https://avatars0.githubusercontent.com/u/4276775?v=3&s=90'],
+            iconClass: 'glyphicon glyphicon-user text-warning',
             timeOut: 5000
-        }).css("background-color", getRandomColor());
+        }).css('background-color', getRandomColor());
 
     });
 
@@ -83,8 +81,8 @@ define(['toastr8'], function (toastr8) {
     }
     function randomToast(type) {
         return toastr8[type]({
-            message: "Go get him a nice meal...",
-            title: "It is your pet's birthay.",
+            message: 'Go get him a nice meal...',
+            title: 'It is your pet\'s birthay.',
             imgURI: avatars[parseInt(Math.random() * al)],
             timeOut: (Math.random() * maxTimeOut) + 1
         });
