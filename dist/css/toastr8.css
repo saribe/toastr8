@@ -1,9 +1,9 @@
 /*
  * Toastr8
  * Version 1.0.2
- * Copyright 2013 Samuel Pinto.  
- * All Rights Reserved.  
- * Use, reproduction, distribution, and modification of this code is subject to the terms and 
+ * Copyright 2013 Samuel Pinto.
+ * All Rights Reserved.
+ * Use, reproduction, distribution, and modification of this code is subject to the terms and
  * conditions of the MIT license, available at http://www.opensource.org/licenses/mit-license.php
  *
 * @author Samuel Pinto
@@ -13,20 +13,20 @@
 
 /* ============================ POSITIONS ============================ */
 .toast8-top-full-width {
-    top: 0;
     right: 0;
+    top: 0;
     width: 100%;
 }
 
 .toast8-bottom-full-width {
-    right: 0;
     bottom: 0;
+    right: 0;
     width: 100%;
 }
 
 .toast8-top-left {
-    top: 12px;
     left: 0;
+    top: 12px;
 }
 
 .toast8-top-right {
@@ -89,8 +89,6 @@
         vertical-align: top;
     }
 
-
-
         #toast8-container tr > td {
             padding: 0;
         }
@@ -110,10 +108,9 @@
                 /* font-size: 1em; */
                 text-align: left;
                 width: 100%;
-            
                 word-break: break-all;
                 word-wrap: normal;
-}
+            }
 
             #toast8-container tr > .toast8-message-container > .toast8-message {
                 float: left;
@@ -151,20 +148,20 @@
             }
 
             #toast8-container tr > .toast8-right-container .toast8-close-button {
-                top: 0;
                 background-color: transparent;
+                border: 0;
                 color: white;
-                font-size: 1.3em;
-                width: 1.1em;
-                height: 1.1em;
-                position: absolute;
-                right: 0;
                 display: none;
+                font-size: 1.3em;
+                font-weight: bolder;
+                height: 1.1em;
                 line-height: 1.1em;
                 min-width: 0;
-                border: 0;
                 padding: 0;
-                font-weight: bolder;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 1.1em;
             }
 
                 #toast8-container tr > .toast8-right-container .toast8-close-button:hover,
@@ -177,34 +174,29 @@
                 }
 
         #toast8-container tr > .toast8-avatar-container {
-            /* float: left; */
             background-color: #333333;
             background-color: rgba(51, 51, 51, 0.9);
             background-position: center center;
             background-repeat: no-repeat;
-            line-height: 94px;
-            width: 90px;
             height: 100%;
+            line-height: 94px;
             max-height: 90px;
             padding: 0;
             text-align: center;
-        
-            /* margin-top: auto; */
-            /* margin-bottom: auto; */
-            /* padding-top: 25px; */
-}
+            width: 90px;
+        }
 
             #toast8-container tr > .toast8-avatar-container i {
-                position: absolute;
-                height: 90px;
-                width: 90px;
                 border: 0;
+                height: 90px;
+                position: absolute;
+                width: 90px;
             }
 
             #toast8-container tr > .toast8-avatar-container img {
-                width: 100%;
                 height: 100%;
                 padding: 0;
+                width: 100%;
             }
 
     #toast8-container.toast8-top-full-width > table,
@@ -224,18 +216,18 @@
 }
 
 .toast8-success {
-    background-color: #008000;
-    border: 1px solid #006700;
+    background-color: #5cb85c;
+    border: 1px solid #4cae4c;
 }
 
 .toast8-error {
-    background-color: #bd4338;
-    border: 1px solid #a93c32;
+    background-color: #d9534f;
+    border: 1px solid #d43f3a;
 }
 
 .toast8-info {
-    background-color: #428bca;
-    border: 1px solid #357ebd;
+    background-color: #5bc0de;
+    border: 1px solid #46b8da;
 }
 
 .toast8-warning {
@@ -280,12 +272,11 @@
 }
 /* ===== MESSAGE TYPE ===== */
 
-
 /*Responsive Design*/
 @media (max-width: 240px) {
     #toast8-container > table {
-        width: 15em;
         font-size: 70%;
+        width: 15em;
     }
 
     #toast8-container tr > .toast8-avatar-container {
@@ -295,16 +286,16 @@
 
 @media (max-width: 480px) {
     #toast8-container > table {
-        width: 16em;
         font-size: 75%;
+        width: 16em;
     }
 }
 
 @media (max-width: 768px) {
     #toast8-container > table {
-        width: 20em;
-        min-width: 20em;
         font-size: 85%;
+        min-width: 20em;
+        width: 20em;
     }
 
     #toast8-container tr > .toast8-right-container i {
@@ -313,17 +304,15 @@
     }
 }
 
-
 .slideOutRight {
     animation-name: slideOutRight;
     -webkit-animation-name: slideOutRight;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
+    animation-duration: 0.8s;
+    -webkit-animation-duration: 0.8s;
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
     opacity: 0 !important;
 }
-
 
 @keyframes slideOutRight {
     0% {
@@ -331,21 +320,13 @@
         opacity: 1;
     }
 
-    50% {
-        transform: translateX(-8%);
-    }
-
     65% {
-        transform: translateX(-5%);
-    }
-
-    75% {
-        transform: translateX(-8%);
+        transform: translateX(-4%);
     }
 
     100% {
-        transform: translateX(150%);
-        opacity: 0.2;
+        transform: translateX(140%);
+        opacity: 0.1;
     }
 }
 
@@ -355,17 +336,12 @@
         opacity: 1;
     }
 
-    50% {
-        -webkit-transform: translateX(-8%);
-    }
-
     65% {
-        -webkit-transform: translateX(-11%) rotate(-1deg);
+        -webkit-transform: translateX(-4%);
     }
-
 
     100% {
-        -webkit-transform: translateX(110%);
-        opacity: 0.2;
+        -webkit-transform: translateX(140%);
+        opacity: 0.1;
     }
 }
